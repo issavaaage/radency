@@ -1,0 +1,30 @@
+<div class="container" [formGroup]="form">
+  <div class="title">
+    <h1>{{data.editMode? 'Edit note' : 'Create note'}}</h1>
+  </div>
+  <div class="col-xl-12 mb-4">
+    <p>Label:</p>
+    <input class="form-control"
+           formControlName="label">
+  </div>
+  <div class="col-xl-12 mb-4">
+    <p>Description:</p>
+    <textarea class="form-control"
+              formControlName="description"></textarea>
+  </div>
+  <div class="col-xl-12 mb-4">
+    <p>Category:</p>
+    <input class="form-control"
+           formControlName="category">
+  </div>
+  <div class="controllers">
+    <button mat-raised-button
+            id="action-button"
+            [mat-dialog-close]="form.value"
+            [disabled]="!form.valid"
+            color="primary"
+            class="me-2">{{data.editMode? 'Edit' : 'Create'}}</button>
+    <button mat-raised-button
+            mat-dialog-close>Cancel</button>
+  </div>
+</div>

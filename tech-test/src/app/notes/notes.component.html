@@ -1,1 +1,5 @@
-<p>notes works!</p>
+<app-notes-list [notes]="notes"
+                (addNote)="onAddNote()"
+                (editNote)="onEditNote($event)"
+                (doneNote)="onDoneNote($event)"
+                (deleteNote)="onDeleteNote($event)"></app-notes-list>

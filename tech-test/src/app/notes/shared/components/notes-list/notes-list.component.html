@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="notes">
+    <div class="header">
+      <h1>Notes list</h1>
+    </div>
+    <div class="top-bar d-flex justify-content-between">
+      <input type="text"
+             class="form-control"
+             placeholder="Filter by name"
+             [formControl]="filterByName"
+             style="max-width: 200px">
+      <button mat-raised-button color="primary"
+              (click)="onAddNote()">Add note</button>
+    </div>
+    <ul class="list">
+      <li class="item" *ngFor="let note of filteredNotes">
+        <div class="text">
+          <mat-checkbox [checked]="note.done"
+                        class="mb-1"
+                        (change)="onDoneNote($event, note)"></mat-checkbox>
+          <strong class="ms-2">{{note.label}}</strong>
+          <p class="ms-2">{{note.description}}</p>
+        </div>
+        <div class="controllers">
+          <button mat-mini-fab color="primary"
+                  aria-label="Example icon button with a delete icon"
+                  [disabled]="note.done"
+                  (click)="onEditNote(note)">
+            <mat-icon style="font-size: 20px">edit</mat-icon>
+          </button>
+          <button mat-mini-fab color="warn"
+                  aria-label="Example icon button with a home icon"
+                  (click)="onDeleteNote(note.id)">
+            <mat-icon style="font-size: 20px">delete</mat-icon>
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

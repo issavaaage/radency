@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/angular-test-task.iml" filepath="$PROJECT_DIR$/.idea/angular-test-task.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../LabApp/lab-app-front/.idea/lab-app-front.iml" filepath="$PROJECT_DIR$/../../LabApp/lab-app-front/.idea/lab-app-front.iml" />
     </modules>
   </component>
 </project>
