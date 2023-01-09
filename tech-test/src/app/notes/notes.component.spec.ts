@@ -7,7 +7,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { NotesServiceMock } from '../../../mocks/notes.service.mock';
 import { NotesListComponentMock } from '../../../mocks/notes-list.component.mock';
 
-fdescribe('NotesComponent', () => {
+describe('NotesComponent', () => {
   let component: NotesComponent;
   let fixture: ComponentFixture<NotesComponent>;
 
